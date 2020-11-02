@@ -15,12 +15,27 @@ class Hogwarts extends Component {
     .then(res => this.setState( () => ({wizards: res})))
   }
 
+  addWizard = (wizard) => {
+    const configObj = {
+      method: "POST",
+      headers: {
+        "content-type" : "application/json",
+        accept: "application/json"
+      }, 
+      body: JSON.stringify(wizard)
+    }
+
+    fetch(`http://localhost:4000/wizards`, configObj)
+    .then(res => res.json())
+    .then(res => this.setState( prev => ({wizards: [...prev.wizards, res]})))
+  }
+
   render() {
     return (
       <main>
         <MaraudersMap/>
         <GreatHall wizards={this.state.wizards}/>
-        <SortingHat/>
+        <SortingHat addWizard={this.addWizard}/>
       </main>
     )
   }
