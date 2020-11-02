@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 
 class MaraudersMap extends Component {
 
+  changeHandler = (e) => {
+    this.props.selectHouse(e.target.value)
+  }
+
   render() {
     return (
       <nav>
         <h2>Houses of Hogwarts</h2>
-        <select id="map">
+        <select id="map" onChange={this.changeHandler}>
           <option value="All">All</option>
           <option value="Gryffindor">Gryffindor</option>
           <option value="Hufflepuff">Hufflepuff</option>

@@ -1,14 +1,6 @@
 {
   "wizards": [
     {
-      "id": 1,
-      "name": "Harry Potter",
-      "wand": "Phoenix Feather",
-      "house": "Gryffindor",
-      "image1": "http://www.univers-series.com/wp-content/uploads/2016/02/harrypotter.jpeg",
-      "image2": "https://img1.looper.com/img/uploads/2019/02/harry-potter.jpg"
-    },
-    {
       "id": 2,
       "name": "Hermione Granger",
       "wand": "Dragon Heartstring",
@@ -47,6 +39,14 @@
       "house": "Gryffindor",
       "image1": "https://fsmedia.imgix.net/21/fd/33/16/2844/4ec3/bae9/57d38001e216/sonserina.jpeg?rect=0%2C0%2C1920%2C959&dpr=2&auto=format%2Ccompress&w=650",
       "image2": "https://img1.looper.com/img/gallery/professor-mcgonagalls-entire-backstory-explained/intro-1582830670.jpg"
+    },
+    {
+      "id": 7,
+      "name": "AAA",
+      "wand": "AAA",
+      "house": "Gryffindor",
+      "image1": "https://images.prismic.io/smallexchange-com/21260cc6-c545-4571-8f59-cd96052b327e_SMFE_Site_Buttons-SMALL%403x.png?auto=compress,format",
+      "image2": "https://images.prismic.io/smallexchange-com/21260cc6-c545-4571-8f59-cd96052b327e_SMFE_Site_Buttons-SMALL%403x.png?auto=compress,format"
     }
   ]
 }
