@@ -2,12 +2,21 @@ import React, { Component } from 'react';
 
 class SortingHat extends Component {
 
+  submitHandler = event => {
+    this.props.submitHandler(event)
+      event.target.name.value = ""
+      event.target.wand.value = ""
+      event.target.house.value = ""
+      event.target.image1.value = ""
+      event.target.image2.value = ""
+  }
+
   render() {
 
     return (
       <section>
         <h2>You Could Be Great, You Know...</h2>
-        <form className="new_container">
+        <form className="new_container" onSubmit={this.submitHandler}>
 
           <label htmlFor="name">Name:</label>
           <input type="text" name="name" id="name"/>

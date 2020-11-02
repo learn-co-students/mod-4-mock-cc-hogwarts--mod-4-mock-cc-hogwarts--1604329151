@@ -2,21 +2,31 @@ import React, { Component } from 'react';
 
 class Wizard extends Component {
 
+  state = ({
+    clicked: false
+  })
+
+  imageHandler = () => {
+    return this.setState({
+      clicked: !this.state.clicked
+    })
+  }
+
   render() {
     return (
         <li className={`card ${"HOUSE HERE"}`}>
           <div className="decorative">
             <div className="top">
               <div className="name">
-                <h3>{"NAME HERE"}</h3>
+                <h3>{this.props.student.name}</h3>
               </div>
               <div className="border">
-                <img src={"IMAGE HERE"} alt={"NAME HERE"}/>
+                <img onClick={this.imageHandler} src={this.state.clicked ? this.props.student.image2 : this.props.student.image1} alt={this.props.student.name}/>
               </div>
             </div>
             <div className="card_bottom">
-              <p className="house_name">{"HOUSE HERE"}</p>
-              <p className="description">Wand: {"WAND HERE"}</p>
+              <p className="house_name">{this.props.student.house}</p>
+              <p className="description">Wand: {this.props.student.wand}</p>
               <button>
                 Graduate
               </button>
