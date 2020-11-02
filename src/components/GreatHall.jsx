@@ -4,7 +4,7 @@ import Wizard from './Wizard'
 const GreatHall = (props) => {
 
   const renderWizards =  () => {
-    return props.wizards.map( wiz => <Wizard key={wiz.id} wizard={wiz}/>)
+    return props.wizards.map( wiz => <Wizard deleteHandler={props.deleteHandler} key={wiz.id} wizard={wiz}/>)
   }
   return (
     <section>

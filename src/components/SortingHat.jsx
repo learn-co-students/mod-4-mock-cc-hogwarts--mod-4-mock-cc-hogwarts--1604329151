@@ -17,6 +17,11 @@ class SortingHat extends Component {
   submitHandler = (e) => {
     e.preventDefault()
     this.props.addWizard(this.state)
+    this.setState({name: "",
+    wand: "",
+    house: "",
+    image1: "",
+    image2: ""})
   }
 
   render() {

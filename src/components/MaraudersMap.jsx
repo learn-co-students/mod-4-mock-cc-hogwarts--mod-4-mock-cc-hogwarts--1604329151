@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 
 class MaraudersMap extends Component {
 
+  sendFilter = e => {
+    this.props.filter(e.target.value)
+  }
+
+
   render() {
     return (
       <nav>
         <h2>Houses of Hogwarts</h2>
-        <select id="map">
+        <select onChange ={this.sendFilter} id="map">
           <option value="All">All</option>
           <option value="Gryffindor">Gryffindor</option>
           <option value="Hufflepuff">Hufflepuff</option>

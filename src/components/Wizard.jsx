@@ -10,6 +10,10 @@ class Wizard extends Component {
     this.setState(prev => ({clicked: !prev.clicked}))
   }
 
+  localDeleteHandler = () => {
+    this.props.deleteHandler(this.props.wizard)
+  }
+
   render() {
     return (
         <li className={`card ${"HOUSE HERE"}`}>
@@ -25,7 +29,7 @@ class Wizard extends Component {
             <div className="card_bottom">
               <p className="house_name">{this.props.wizard.house}</p>
               <p className="description">Wand: {this.props.wizard.wand}</p>
-              <button>
+              <button onClick={this.localDeleteHandler}>
                 Graduate
               </button>
             </div>
