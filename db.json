@@ -9,14 +9,6 @@
       "image2": "https://img1.looper.com/img/uploads/2019/02/harry-potter.jpg"
     },
     {
-      "id": 2,
-      "name": "Hermione Granger",
-      "wand": "Dragon Heartstring",
-      "house": "Gryffindor",
-      "image1": "https://wallpapersite.com/images/pages/pic_w/8936.jpg",
-      "image2": "https://vignette.wikia.nocookie.net/harrypotter/images/7/7e/Hermione-HBP-hermione-granger-16048675-1919-2560.jpg/revision/latest?cb=20140628051753"
-    },
-    {
       "id": 3,
       "name": "Ron Weasley",
       "wand": "Unicorn Tail Hair",

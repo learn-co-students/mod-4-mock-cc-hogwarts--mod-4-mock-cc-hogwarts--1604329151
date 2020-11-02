@@ -6,7 +6,7 @@ class MaraudersMap extends Component {
     return (
       <nav>
         <h2>Houses of Hogwarts</h2>
-        <select id="map">
+        <select id="map" value={this.props.filter} onChange={this.props.searchHandler}>
           <option value="All">All</option>
           <option value="Gryffindor">Gryffindor</option>
           <option value="Hufflepuff">Hufflepuff</option>
