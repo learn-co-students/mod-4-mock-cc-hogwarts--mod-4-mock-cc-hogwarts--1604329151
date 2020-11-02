@@ -2,31 +2,35 @@ import React, { Component } from 'react';
 
 class Wizard extends Component {
   state = {
-    img: this.props.img1,
-    imageClicked: false
+    img: this.props.img1
   }
   
   clickHandler = (e) => {
-    console.log(e.target)
-    console.log("clicked", this.state.imageClicked)
-
-    this.setState({
-      imageClicked: !this.state.imageClicked
-    })
-    this.changeImage()
-    console.log("clicked", this.state.imageClicked)
-  }
+    if (this.state.img == this.props.img1) {
+      this.setState({
+        img: this.props.img2
+      }) 
+      } else if (this.state.img == this.props.img2)  {
+        this.setState({
+          img: this.props.img1
+        })
+      }
+    }
+    
+    //   this.setState((prevState)=>({
+    //   imgToggle: !prevState.imgToggle
+    // }))
+    // {
+    //   this.state.imgToggle ?
+    //   this.setState({ img: this.props.img2 }) :
+    //   this.setState({ img: this.props.img1 })
+    // }
   
-  
-
-  changeImage = () => {
-    {this.state.imageClicked ? 
-      this.setState({img: this.props.img2}) :
-      this.setState({img: this.props.img1})}
-  } 
+    
+    
    
 
-    // {this.state.imageClicked ? this.setState({img: this.props.img2}) : this.setState({img: this.props.img1})}
+    
   
   render() {
     return (
