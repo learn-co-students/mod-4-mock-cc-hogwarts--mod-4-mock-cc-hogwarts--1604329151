@@ -5,7 +5,7 @@ const GreatHall = props => {
 
   const renderStudents = () => {
     let allStudents = props.students
-    return allStudents.map(student => <Wizard key={student.id} student={student}/>)
+    return allStudents.map(student => <Wizard graduateStudent={props.graduateStudent} key={student.id} student={student}/>)
   }
   return (
     <section>

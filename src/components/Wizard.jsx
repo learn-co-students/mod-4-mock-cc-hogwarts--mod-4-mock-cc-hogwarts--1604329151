@@ -12,6 +12,10 @@ class Wizard extends Component {
     })
   }
 
+  graduateStudent = () => {
+    return this.props.graduateStudent(this.props.student)
+  }
+
   render() {
     return (
         <li className={`card ${"HOUSE HERE"}`}>
@@ -27,7 +31,7 @@ class Wizard extends Component {
             <div className="card_bottom">
               <p className="house_name">{this.props.student.house}</p>
               <p className="description">Wand: {this.props.student.wand}</p>
-              <button>
+              <button onClick={this.graduateStudent}>
                 Graduate
               </button>
             </div>
